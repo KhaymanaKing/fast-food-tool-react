@@ -1,7 +1,16 @@
 import React from 'react';
-
-export default function OrderInstructions() {
+import './Instructions.css';
+export default function OrderInstructionsList({ instructions }) {
   return (
-    <div>OrderInstructions</div>
+    <div>
+      <h2>Special Requests</h2>
+      <ul className='instructions'>
+        <li>
+          {
+            instructions.map((instruction, i) => <p key={instruction + i}>{instruction}</p>)
+          }
+        </li>
+      </ul>
+    </div>
   );
 }
