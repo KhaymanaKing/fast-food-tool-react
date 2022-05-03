@@ -1,11 +1,12 @@
 import React from 'react';
+import './Order.css';
 
 export default function Order({ drinkId, entreeId, sideId }) {
   return (
-    <div>
-      <img src ={`entree-${entreeId}.jpeg`}/>
-      <img src ={`drink-${drinkId}.jpeg`}/>
-      <img src ={`side-${sideId}.jpeg`}/>
+    <div className='order'>
+      <img src ={`entree-${entreeId}.png`}/>
+      <img src ={`drink-${drinkId}.png`}/>
+      <img src ={`side-${sideId}.png`}/>
     </div>
   );
 }
