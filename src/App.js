@@ -5,7 +5,7 @@ import NameInput from './Name/NameInput';
 import DrinkDropDown from './FoodOrder/DrinkDropDown';
 import EntreeDropDown from './FoodOrder/EntreeDropDown';
 import SideDropDown from './FoodOrder/SideDropdown';
-
+import Order from './FoodOrder/Order';
 function App() {
   const [orderName, setOrderName] = useState('');
   const [drinkId, setDrinkId] = useState('1');
@@ -20,6 +20,8 @@ function App() {
     <div className="App">
       Order for {orderName}!
       <NameInput handleOrderName={handleOrderName}/>
+      
+      <Order drinkId={drinkId} entreeId={entreeId} sideId={sideId}/>
       <section className='dropdowns'>
         <EntreeDropDown setEntreeId={setEntreeId}/>
         <DrinkDropDown setDrinkId={setDrinkId}/>
