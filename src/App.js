@@ -20,7 +20,12 @@ function App() {
     <div className="App">
       Order for {orderName}!
       <NameInput handleOrderName={handleOrderName}/>
+      <section className='dropdowns'>
+        <EntreeDropDown setEntreeId={setEntreeId}/>
+        <DrinkDropDown setDrinkId={setDrinkId}/>
+        <SideDropDown setSideId={setSideId}/>
 
+      </section>
     </div>
   );
 }
